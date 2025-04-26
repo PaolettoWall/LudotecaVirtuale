@@ -1,6 +1,7 @@
 package it.uniroma3.siw.Ludoteca;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,6 +17,19 @@ public class Customer {
     private String surname;
     private String email;
     private String password;
-    private String phoneNumber;     
+    private String phoneNumber;
+    
+    public Customer() {
+    }
+
+    public Customer(String name, String surname, String email, String password, String phoneNumber) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }     
+
+    
 
 }
