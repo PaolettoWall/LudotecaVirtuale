@@ -6,23 +6,10 @@ import java.util.List;
 
 @Entity
 public class Catalogo {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    
-
-    public Catalogo() {
-    }
-
-    
-
-    public Catalogo(String genere, List<DescrizioneGioco> giochi) {
-        this.genere = genere;
-        this.giochi = giochi;
-    }
-
-
 
     @Column(unique = true, nullable = false)
     private String genere; // "horror", "bambini", "famiglia"
@@ -35,6 +22,17 @@ public class Catalogo {
         gioco.setCatalogo(this);
     }
 
+
+
+    public Catalogo() {
+    }
+
+    
+
+    public Catalogo(String genere, List<DescrizioneGioco> giochi) {
+        this.genere = genere;
+        this.giochi = giochi;
+    }
 
 
     public Long getId() {
